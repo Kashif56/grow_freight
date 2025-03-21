@@ -111,25 +111,25 @@
                         <form class="row g-4" method="post">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control custom-input" id="fullName" placeholder="Full Name" required>
-                                    <label for="fullName">Company Name</label>
+                                    <input type="text" class="form-control custom-input" id="companyName" name="companyName" placeholder="Company Name" required>
+                                    <label for="companyName">Company Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control custom-input" id="companyName" placeholder="Company Name">
-                                    <label for="companyName">MC Number</label>
+                                    <input type="text" class="form-control custom-input" id="mcNumber" name="mcNumber" placeholder="MC Number">
+                                    <label for="mcNumber">MC Number</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control custom-input" id="truckType" placeholder="Truck Type" required>
+                                    <input type="text" class="form-control custom-input" id="truckType" name="truckType" placeholder="Truck Type" required>
                                     <label for="truckType">Truck Type</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control custom-input" id="phone" placeholder="Phone Number" required>
+                                    <input type="tel" class="form-control custom-input" id="phone" name="phone" placeholder="Phone Number" required>
                                     <label for="phone">Contact Number</label>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                             
                             <div class="col-12 mt-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="termsConditions" required>
+                                    <input class="form-check-input" type="checkbox" id="termsConditions" name="termsConditions" required>
                                     <label class="form-check-label" for="termsConditions">
                                         I agree to the <a href="#" class="text-secondary">Terms and Conditions</a>
                                     </label>
@@ -147,9 +147,15 @@
                             </div>
                             
                             <div class="col-12 text-center mt-4">
-                                <button type="submit" class="btn-cta">
-                                    <i class="fas fa-paper-plane me-2"></i>Submit Quote Request
+                                <button type="button" id="submitBtn" class="btn-cta" onclick="handleFormSubmit()">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Join Request
                                 </button>
+                            </div>
+                            
+                            <div class="col-12 mt-3" id="formStatus" style="display: none;">
+                                <div class="alert alert-success text-center">
+                                    Thank you for your interest! We'll be in touch soon.
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -272,6 +278,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Custom JS -->
     <script>
         // Navbar scroll effect
@@ -304,6 +312,84 @@
             document.querySelectorAll('.fade-up, .fade-in').forEach(element => {
                 observer.observe(element);
             });
+            
+            // Initialize EmailJS
+            (function() {
+                // Replace with your EmailJS user ID
+                emailjs.init("hEWjqBHZ2aZ6-DKoQ");
+            })();
+            
+            // Debug message to confirm script is loaded
+            console.log('Join form script initialized');
+            
+            // Add click event to button directly 
+            const submitButton = document.getElementById('submitBtn');
+            if (submitButton) {
+                console.log('Submit button found and bound');
+                submitButton.addEventListener('click', handleFormSubmit);
+            } else {
+                console.error('Submit button not found!');
+            }
+            
+            // Form submission handler function
+            function handleFormSubmit() {
+                console.log('Submit button clicked - from handler function');
+                
+                const form = document.querySelector('form');
+                
+                // Validate form
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = document.getElementById('submitBtn');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+                submitBtn.disabled = true;
+                
+                // Get form data
+                const templateParams = {
+                    companyName: document.getElementById('companyName').value,
+                    mcNumber: document.getElementById('mcNumber').value,
+                    truckType: document.getElementById('truckType').value,
+                    phone: document.getElementById('phone').value,
+                    formType: 'Join Network Request'
+                };
+                
+                // Send email
+                emailjs.send('service_x81202s', 'template_rwtv83c', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        
+                        // Show success message
+                        const formStatus = document.getElementById('formStatus');
+                        formStatus.style.display = 'block';
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Redirect after short delay
+                        setTimeout(function() {
+                            window.location.href = "LandingPage.html";  // Redirect to landing page instead
+                        }, 2000);
+                        
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        
+                        // Show error message
+                        const formStatus = document.getElementById('formStatus');
+                        formStatus.style.display = 'block';
+                        formStatus.querySelector('.alert').classList.remove('alert-success');
+                        formStatus.querySelector('.alert').classList.add('alert-danger');
+                        formStatus.querySelector('.alert').textContent = 'There was an error sending your request. Please try again later or contact us directly.';
+                        
+                        // Reset button
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+            }
         });
     </script>
 </body>

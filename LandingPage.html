@@ -54,7 +54,7 @@
                     </li>
                    
                 </ul>
-                <a href="GetAQuote.html" class="btn btn-secondary ms-3">Get a Quote</a>
+                <a href="Joinus.html" class="btn btn-secondary ms-3">Join us</a>
             </div>
         </div>
     </nav>
@@ -813,13 +813,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating mb-3">
-                                            <select class="form-select contact-input" id="serviceSelect" aria-label="Select Service">
-                                                <option selected disabled>Select Service</option>
-                                                <option value="ftl">Full Truckload (FTL)</option>
-                                                <option value="ltl">Less than Truckload (LTL)</option>
-                                                <option value="expedited">Expedited Shipping</option>
-                                                <option value="consultation">Freight Consultation</option>
-                                                <option value="carrier">Carrier Partnership</option>
+                                            <select class="form-select contact-input dark" id="serviceSelect" aria-label="Select Service">
+                                                <option class="dark" selected disabled>Select Service</option>
+                                                <option class="dark" value="ftl">Full Truckload (FTL)</option>
+                                                <option class="dark" value="ltl">Less than Truckload (LTL)</option>
+                                                <option class="dark" value="expedited">Expedited Shipping</option>
+                                                <option class="dark" value="consultation">Freight Consultation</option>
+                                                <option class="dark" value="carrier">Carrier Partnership</option>
                                             </select>
                                             <label for="serviceSelect">Select Service</label>
                                         </div>
@@ -830,7 +830,12 @@
                                     <label for="messageTextarea">Your Message</label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="cta-button">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                                    <button type="button" id="contactSubmitBtn" class="cta-button" onclick="handleContactSubmit()">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                                <div class="mt-3" id="contactFormStatus" style="display: none;">
+                                    <div class="alert alert-success text-center">
+                                        Thank you for your message! We'll be in touch soon.
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -893,9 +898,90 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- AOS Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
+    <!-- EmailJS Contact Form Submission -->
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("hEWjqBHZ2aZ6-DKoQ");
+        })();
+        
+        // Contact form submission handler
+        function handleContactSubmit() {
+            console.log('Contact form submission triggered');
+            
+            const form = document.getElementById('contactForm');
+            
+            // Validate form
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const templateParams = {
+                name: document.getElementById('nameInput').value,
+                email: document.getElementById('emailInput').value,
+                phone: document.getElementById('phoneInput').value,
+                service: document.getElementById('serviceSelect').value,
+                message: document.getElementById('messageTextarea').value,
+                formType: 'Contact Form Inquiry'
+            };
+            
+            // Send email
+            emailjs.send('service_x81202s', 'template_rwtv83c', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    const formStatus = document.getElementById('contactFormStatus');
+                    formStatus.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    const formStatus = document.getElementById('contactFormStatus');
+                    formStatus.style.display = 'block';
+                    formStatus.querySelector('.alert').classList.remove('alert-success');
+                    formStatus.querySelector('.alert').classList.add('alert-danger');
+                    formStatus.querySelector('.alert').textContent = 'There was an error sending your message. Please try again later or contact us directly.';
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+        }
+        
+        // Add event listener once DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+            
+            // Validate contact form exists
+            const contactBtn = document.getElementById('contactSubmitBtn');
+            if (contactBtn) {
+                console.log('Contact form submit button found');
+                contactBtn.addEventListener('click', handleContactSubmit);
+            }
+        });
+    </script>
 </body>
 </html>

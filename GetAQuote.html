@@ -174,7 +174,7 @@
                             </div>
                             
                             <div class="col-12 text-center mt-4">
-                                <button type="button" id="submitBtn" class="btn-cta">
+                                <button type="button" id="submitBtn" class="btn-cta" onclick="handleFormSubmit()">
                                     <i class="fas fa-paper-plane me-2"></i>Submit Quote Request
                                 </button>
                             </div>
@@ -421,9 +421,23 @@
                 // Replace with your EmailJS user ID
                 emailjs.init("hEWjqBHZ2aZ6-DKoQ");
             })();
+
+            // Debug message to confirm script is loaded
+            console.log('Quote form script initialized');
             
-            // Form submission with EmailJS
-            document.getElementById('submitBtn').addEventListener('click', function() {
+            // Add click event to button directly 
+            const submitButton = document.getElementById('submitBtn');
+            if (submitButton) {
+                console.log('Submit button found and bound');
+                submitButton.addEventListener('click', handleFormSubmit);
+            } else {
+                console.error('Submit button not found!');
+            }
+            
+            // Form submission handler function
+            function handleFormSubmit() {
+                console.log('Submit button clicked - from handler function');
+                
                 const form = document.getElementById('quoteForm');
                 
                 // Validate form
@@ -433,7 +447,7 @@
                 }
                 
                 // Show loading state
-                const submitBtn = this;
+                const submitBtn = document.getElementById('submitBtn');
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
                 submitBtn.disabled = true;
@@ -480,7 +494,7 @@
                         submitBtn.innerHTML = originalBtnText;
                         submitBtn.disabled = false;
                     });
-            });
+            }
         });
     </script>
 </body>
