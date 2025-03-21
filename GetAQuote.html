@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - GrowMore Freight LLC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/get-a-quote.css">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="shape-top"></div>
+    <div class="shape-bottom"></div>
+    <div class="dot-pattern"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="LandingPage.html">Grow<span>More</span> Freight</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Services.html">Services</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="HowItWorks.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Health_and_Safety.html">Health & Safety</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="solutionsDropdown">
+                            <li><a class="dropdown-item" href="Shipper.html">For Shippers</a></li>
+                            <li><a class="dropdown-item" href="Carrier.html">For Carriers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="companyDropdown">
+                            <li><a class="dropdown-item" href="Aboutus.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="JoinUs.html">Join Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-secondary rounded-pill active" href="GetAQuote.html">
+                            <i class="fas fa-calculator me-2"></i>Get a Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="page-badge">
+                        <div class="badge-pulse"></div>
+                        <span>REQUEST ESTIMATE</span>
+                    </div>
+                    <h1 class="page-title">
+                        Get a <span class="gradient-text">Freight Quote</span>
+                    </h1>
+                    <p class="page-subtitle">Fast, accurate freight quotes for your logistics needs. Fill out the form below, and our team will provide a competitive rate within 2 hours during business hours.</p>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="quote-image-container">
+                        <img src="https://images.pexels.com/photos/4481323/pexels-photo-4481323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Freight Quote" class="img-fluid rounded-3 shadow">
+                        <div class="quote-badge">
+                            <div class="quote-badge-inner">
+                                <i class="fas fa-truck"></i>
+                                <span>Fast Response</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quote Form Section -->
+    <section id="quote-form" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="quote-form-container fade-up">
+                        <div class="form-header">
+                            <h2>Freight Quote Request</h2>
+                            <p>Please provide the details about your shipment below</p>
+                        </div>
+                        <form id="quoteForm" class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Full Name" required>
+                                    <label for="fullName">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control custom-input" id="phone" name="phone" placeholder="Phone Number" required>
+                                    <label for="phone">Contact Number</label>
+                                </div>
+                            </div>
+
+                    
+                            
+                            <div class="col-md-8">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control custom-input" id="pickupAddress" name="pickupAddress" placeholder="Pickup Address" required>
+                                    <label for="pickupAddress">Pickup Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control custom-input" id="pickupZip" name="pickupZip" placeholder="Pickup Zip Code" required>
+                                    <label for="pickupZip">Pickup Zip Code</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control custom-input" id="deliveryAddress" name="deliveryAddress" placeholder="Delivery Address" required>
+                                    <label for="deliveryAddress">Delivery Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control custom-input" id="deliveryZip" name="deliveryZip" placeholder="Delivery Zip Code" required>
+                                    <label for="deliveryZip">Delivery Zip Code</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select custom-input" id="serviceType" name="serviceType" required>
+                                        <option value="" selected disabled>Select Service Type</option>
+                                        <option value="Full Truckload">Full Truckload (FTL)</option>
+                                        <option value="Less than Truckload">Less than Truckload (LTL)</option>
+                                        <option value="Intermodal">Intermodal</option>
+                                        <option value="Expedited">Expedited</option>
+                                        <option value="Specialized">Specialized</option>
+                                    </select>
+                                    <label for="serviceType">Type of Service</label>
+                                </div>
+                            </div>
+                           
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termsConditions" name="termsConditions" required>
+                                    <label class="form-check-label" for="termsConditions">
+                                        I agree to the <a href="#" class="text-secondary">Terms and Conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 text-center mt-4">
+                                <button type="button" id="submitBtn" class="btn-cta">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Quote Request
+                                </button>
+                            </div>
+                            
+                            <div class="col-12 mt-3" id="formStatus" style="display: none;">
+                                <div class="alert alert-success text-center">
+                                    Thank you for your request! We'll be in touch soon.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Request with GrowMore -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">WHY CHOOSE US</div>
+                <h2 class="section-title text-center">Benefits of Getting a Quote with GrowMore Freight</h2>
+                <p class="section-subtitle mx-auto text-center">Our quotes come with multiple advantages that set us apart from other freight brokers</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Fast Response Time</h3>
+                        <p class="benefit-text">Most quotes are delivered within 2 hours during business hours, with expedited options available for urgent shipments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="benefit-title">Competitive Pricing</h3>
+                        <p class="benefit-text">Leverage our network of verified carriers to get the best rates without compromising on service quality or reliability.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="benefit-title">Accurate Estimates</h3>
+                        <p class="benefit-text">Our detailed quoting process means no hidden fees or surprises, just transparent pricing you can trust.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3 class="benefit-title">Multiple Options</h3>
+                        <p class="benefit-text">We provide multiple service levels and carrier options so you can choose what works best for your timeline and budget.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="benefit-title">Vetted Carriers</h3>
+                        <p class="benefit-text">All quotes are backed by our network of pre-screened carriers with proven safety records and performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="benefit-title">Dedicated Support</h3>
+                        <p class="benefit-text">Each quote comes with a dedicated logistics specialist who will guide you through the entire shipping process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">COMMON QUESTIONS</div>
+                <h2 class="section-title text-center">Frequently Asked Questions</h2>
+                <p class="section-subtitle mx-auto text-center">Find answers to common questions about our quote process and shipping services</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="faq-accordion" id="quoteFaq">
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                    How quickly can I get a freight quote?
+                                </button>
+                            </h2>
+                            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#quoteFaq">
+                                <div class="accordion-body">
+                                    During business hours (Monday through Friday, 8 AM to 6 PM ET), we typically provide quotes within 2 hours of receiving your request. For complex shipments or specialized equipment, it may take slightly longer. If you need an immediate quote for an urgent shipment, please indicate this in your form or call our dedicated quote hotline for expedited service.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                    What information do I need to provide for an accurate quote?
+                                </button>
+                            </h2>
+                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#quoteFaq">
+                                <div class="accordion-body">
+                                    For the most accurate quote, please provide: origin and destination addresses (including zip codes), freight dimensions and weight, commodity type, equipment requirements, pickup and delivery timeframes, and any special services needed (liftgate, inside delivery, etc.). The more detailed information you provide, the more accurate your quote will be. Our quote form guides you through all the essential information we need.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                    Are there any hidden fees in your quotes?
+                                </button>
+                            </h2>
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#quoteFaq">
+                                <div class="accordion-body">
+                                    No, we pride ourselves on transparency. Our quotes include all standard fees associated with your shipment. Your quote will clearly itemize base rates, fuel surcharges, and any accessorial services requested. If circumstances change or additional services are required after the initial quote (such as storage, detention, or rerouting), these would be discussed with you before being applied to your final invoice.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                                    How long is my quote valid?
+                                </button>
+                            </h2>
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#quoteFaq">
+                                <div class="accordion-body">
+                                    Standard quotes are typically valid for 7 days, as freight rates can fluctuate based on market conditions and capacity. For long-term shipping needs, we offer contracted rates that provide price stability over agreed timeframes. Your quote will clearly indicate its expiration date. If you need to book after the expiration date, we'll quickly provide an updated quote reflecting current market conditions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                                    Can I get quotes for recurring shipments or multiple locations?
+                                </button>
+                            </h2>
+                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#quoteFaq">
+                                <div class="accordion-body">
+                                    Yes, we specialize in providing customized solutions for recurring shipments and multi-location distribution networks. For regular shipping needs, our team can establish lane pricing and create a tailored logistics program with dedicated capacity and predictable pricing. Please indicate in the notes section that you have recurring needs, and one of our logistics consultants will contact you to discuss a comprehensive solution.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h3 class="footer-heading">GrowMore Freight</h3>
+                    <p>Connecting shippers and carriers seamlessly across the nation. Our innovative brokerage platform ensures reliable, cost-effective freight transportation solutions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 mb-4 mb-md-0">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <a href="LandingPage.html" class="footer-link">Home</a>
+                    <a href="Services.html" class="footer-link">Services</a>
+                    <a href="HowItWorks.html" class="footer-link">How It Works</a>
+                    <a href="Health_and_Safety.html" class="footer-link">Health & Safety</a>
+                    <a href="Shipper.html" class="footer-link">For Shippers</a>
+                    <a href="Carrier.html" class="footer-link">For Carriers</a>
+                    <a href="Aboutus.html" class="footer-link">About Us</a>
+                    <a href="ContactUs.html" class="footer-link">Contact Us</a>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates and industry insights.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+                            <button class="btn btn-secondary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>&copy; 2023 GrowMore Freight LLC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up, .fade-in').forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Initialize EmailJS
+            (function() {
+                // Replace with your EmailJS user ID
+                emailjs.init("hEWjqBHZ2aZ6-DKoQ");
+            })();
+            
+            // Form submission with EmailJS
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                const form = document.getElementById('quoteForm');
+                
+                // Validate form
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = this;
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+                submitBtn.disabled = true;
+                
+                // Get form data
+                const templateParams = {
+                    fullName: document.getElementById('fullName').value,
+                    phone: document.getElementById('phone').value,
+                    pickupAddress: document.getElementById('pickupAddress').value,
+                    pickupZip: document.getElementById('pickupZip').value,
+                    deliveryAddress: document.getElementById('deliveryAddress').value,
+                    deliveryZip: document.getElementById('deliveryZip').value,
+                    serviceType: document.getElementById('serviceType').value,
+                };
+                
+                // Send email
+                emailjs.send('service_x81202s', 'template_6fbnyps', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        
+                        // Show success message
+                        const formStatus = document.getElementById('formStatus');
+                        formStatus.style.display = 'block';
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Redirect after short delay
+                        setTimeout(function() {
+                            window.location.href = "LandingPage.html";  // Redirect to landing page instead
+                        }, 2000);
+                        
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        
+                        // Show error message
+                        const formStatus = document.getElementById('formStatus');
+                        formStatus.style.display = 'block';
+                        formStatus.querySelector('.alert').classList.remove('alert-success');
+                        formStatus.querySelector('.alert').classList.add('alert-danger');
+                        formStatus.querySelector('.alert').textContent = 'There was an error sending your request. Please try again later or contact us directly.';
+                        
+                        // Reset button
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        });
+    </script>
+</body>
+</html> 

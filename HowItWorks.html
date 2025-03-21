@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - GrowMore Freight LLC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/how-it-works.css">
+
+    <style>
+        .navbar .active {
+            border-bottom: 2px solid var(--secondary);
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="shape-top"></div>
+    <div class="shape-bottom"></div>
+    <div class="dot-pattern"></div>
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="LandingPage.html">GrowMore <span>Freight</span> LLC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="HowItWorks.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Health_and_Safety.html">Health & Safety</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solutions <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="solutionsDropdown">
+                            <li><a class="dropdown-item" href="Shipper.html">For Shippers</a></li>
+                            <li><a class="dropdown-item" href="Carrier.html">For Carriers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="companyDropdown">
+                            <li><a class="dropdown-item" href="Aboutus.html">About Us</a></li>
+                           
+                            <li><a class="dropdown-item" href="#why-choose-us">Why Choose Us</a></li>
+                            <li><a class="dropdown-item" href="ContactUs.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+                <a href="ContactUs.html#quote-form" class="btn btn-secondary ms-3">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="process-hero">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content">
+                    <div class="process-badge">
+                        <div class="badge-pulse"></div>
+                        <span>Our Process</span>
+                    </div>
+                    <h1 class="hero-title">Streamlined Logistics<br><span class="text-white">That Delivers Results</span></h1>
+                    <p class="hero-subtitle text-white">Discover how our 6-step logistics process ensures your freight moves efficiently from origin to destination with complete transparency and reliability.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-shipping-fast"></i></div>
+                            <div class="stat-content">
+                                <div class="stat-number">98.7%</div>
+                                <div class="stat-label">On-Time Delivery</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="stat-content">
+                                <div class="stat-number">99.9%</div>
+                                <div class="stat-label">Safety Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#process-timeline" class="btn btn-primary rounded-pill px-4 py-3 mt-4">
+                        Explore Our Process <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-5 hero-visual">
+                    <div class="hero-image-container">
+                        <img src="https://images.pexels.com/photos/2977513/pexels-photo-2977513.jpeg" alt="Logistics Process" class="hero-image-main">
+                        <div class="hero-image-accent">
+                            <div class="accent-icon"><i class="fas fa-route"></i></div>
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-truck-loading"></i>
+                            <span>Step 1: Consultation</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Step 6: Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#process-timeline">
+                <div class="scroll-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <span>Scroll to Explore</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Process Timeline Section -->
+    <section id="process-timeline" class="process-timeline">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="timeline-tag">Step by Step</div>
+                <h2 class="section-heading">Our Logistics Process</h2>
+                <p class="section-subheading">From initial consultation to final delivery, our proven process ensures your cargo arrives safely and on time.</p>
+            </div>
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <span class="timeline-step">01</span>
+                <div class="timeline-point">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Initial Consultation</h3>
+                    <p class="timeline-text">We start by understanding your specific freight needs, timelines, and requirements to provide a tailored solution. Our logistics experts will discuss your cargo specifications, pickup and delivery locations, and any special handling instructions.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Phone Call</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-video"></i>
+                            <span>Video Meeting</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-building"></i>
+                            <span>Office Visit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <span class="timeline-step">02</span>
+                <div class="timeline-point">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Custom Quote & Planning</h3>
+                    <p class="timeline-text">Based on your requirements, we create a detailed quote and logistics plan optimized for efficiency, cost, and reliability. Our transparent pricing means no hidden fees, and our routing experts design the optimal transport solution.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-calculator"></i>
+                            <span>Cost Analysis</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-route"></i>
+                            <span>Route Planning</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-truck"></i>
+                            <span>Vehicle Selection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <span class="timeline-step">03</span>
+                <div class="timeline-point">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Booking & Agreement</h3>
+                    <p class="timeline-text">Once you approve the quote, we secure your booking and provide all necessary documentation. Our straightforward agreements outline service details, insurance coverage, and delivery timelines to ensure clarity and confidence.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-file-signature"></i>
+                            <span>Contract</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Scheduling</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Insurance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <span class="timeline-step">04</span>
+                <div class="timeline-point">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Pickup & Loading</h3>
+                    <p class="timeline-text">Our professional team arrives at your location to carefully load and secure your freight for transport. We use industry-best loading practices, specialized equipment, and secure cargo restraints to ensure your goods are protected throughout transit.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-dolly"></i>
+                            <span>Handling</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-weight"></i>
+                            <span>Weighing</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-tape"></i>
+                            <span>Securing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <span class="timeline-step">05</span>
+                <div class="timeline-point">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Transportation & Tracking</h3>
+                    <p class="timeline-text">While your freight is in transit, we provide real-time tracking and regular updates on its progress. Our advanced tracking technology allows you to monitor location, estimated arrival times, and any potential adjustments to the delivery schedule.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>GPS Tracking</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Updates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item">
+                <span class="timeline-step">06</span>
+                <div class="timeline-point">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Delivery & Confirmation</h3>
+                    <p class="timeline-text">We deliver your freight to the destination, ensure proper unloading, and complete all delivery documentation. Our delivery confirmation process includes recipient signature, condition verification, and final delivery photos for your records.</p>
+                    <div class="timeline-icon-row">
+                        <div class="process-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Inspection</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-signature"></i>
+                            <span>Sign-off</span>
+                        </div>
+                        <div class="process-icon">
+                            <i class="fas fa-camera"></i>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="timeline-tag">Common Questions</div>
+                <h2 class="section-heading">Frequently Asked Questions</h2>
+                <p class="section-subheading">Get answers to common questions about our logistics process and services.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How quickly can you arrange a freight shipment?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    For standard shipments, we typically require 24-48 hours' notice to optimize routing and resource allocation. However, we understand that urgent situations arise, and our expedited service can accommodate same-day pickups in many locations. Contact our logistics team immediately for urgent shipment needs, and we'll work to find the fastest solution.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What tracking information will I receive during transit?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our comprehensive tracking system provides real-time location updates, estimated arrival times, and progress notifications. You'll receive automated alerts at key milestones: pickup confirmation, departure, checkpoint crossings, and approaching delivery. Our customer portal provides 24/7 access to current status, route visualization, and delivery documentation.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How do you handle special handling requirements?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We specialize in accommodating diverse freight needs, including temperature-controlled transport, hazardous materials, oversized loads, and fragile items. During the initial consultation, please inform us of any special requirements so we can assign appropriate equipment and personnel. Our team is certified in various specialized handling procedures to ensure your cargo receives the exact care it needs.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What happens if there's a delivery issue or delay?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We proactively monitor potential disruptions like weather events or traffic issues and immediately develop alternative routing when needed. If a delay occurs, your dedicated coordinator will contact you promptly with the cause, revised delivery estimate, and mitigation plan. Our contingency protocols include backup vehicles, alternative routes, and priority rescheduling to minimize impact on your operations.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What insurance coverage is provided for my shipment?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    All shipments include basic cargo liability coverage, but we recommend our comprehensive insurance options for full protection. Standard coverage includes protection against carrier negligence, while our premium coverage extends to all risk factors including natural disasters and theft. We can tailor insurance levels based on cargo value and risk profile, and all claims are processed through our streamlined system with typical resolution within 10-15 business days.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h3 class="footer-heading">About GrowMore Freight</h3>
+                    <p>We provide efficient logistics solutions tailored to your specific needs, ensuring your cargo arrives safely and on time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <a href="LandingPage.html" class="footer-link">Home</a>
+                    <a href="Services.html" class="footer-link">Services</a>
+                    <a href="HowItWorks.html" class="footer-link">How It Works</a>
+                    <a href="Health_and_Safety.html" class="footer-link">Health & Safety</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <a href="Services.html#truckload" class="footer-link">Truckload Freight</a>
+                    <a href="Services.html#ltl" class="footer-link">LTL Shipping</a>
+                    <a href="Services.html#expedited" class="footer-link">Expedited Shipping</a>
+                    <a href="Services.html#specialized" class="footer-link">Specialized Freight</a>
+                    <a href="Services.html#international" class="footer-link">International Shipping</a>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 1234 Logistics Way, Freight City, FC 56789</p>
+                    <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@growmorefreight.com</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Subscribe to Newsletter</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row copyright text-center">
+                <div class="col-12">
+                    <p class="mb-0">© 2023 GrowMore Freight LLC. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animation when elements come into view
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Don't animate hero elements as they should always be visible
+                        if (!entry.target.closest('.process-hero')) {
+                            entry.target.classList.add('active');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up, .fade-in').forEach(element => {
+                // Skip hero elements to prevent them from disappearing
+                if (!element.closest('.process-hero')) {
+                    observer.observe(element);
+                } else {
+                    // Immediately add active class to hero elements
+                    element.classList.add('active');
+                }
+            });
+
+            // Add active class to timeline items when they come into view
+            const timelineObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, 300 * Array.from(document.querySelectorAll('.timeline-item.active')).length);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.classList.add('fade-up');
+                timelineObserver.observe(item);
+            });
+
+            // Add animation classes to elements but NOT to hero elements
+            document.querySelectorAll('.section-heading, .section-subheading').forEach(element => {
+                element.classList.add('fade-up');
+            });
+            
+            // Add active class to hero elements immediately
+            document.querySelectorAll('.hero-title, .hero-subtitle, .process-badge, .hero-stats, .hero-visual').forEach(element => {
+                element.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 

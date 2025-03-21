@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowMore Freight LLC - Our Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/services.css">
+
+    <style>
+        .active{
+            border-bottom: 2px solid var(--secondary);
+         
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="LandingPage.html">GrowMore <span>Freight</span> LLC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="HowItWorks.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Health_and_Safety.html">Health & Safety</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solutions <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="solutionsDropdown">
+                            <li><a class="dropdown-item" href="Shipper.html">For Shippers</a></li>
+                            <li><a class="dropdown-item" href="Carrier.html">For Carriers</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="companyDropdown">
+                            <li><a class="dropdown-item" href="Aboutus.html">About Us</a></li>
+                           
+                            <li><a class="dropdown-item" href="#why-choose-us">Why Choose Us</a></li>
+                            <li><a class="dropdown-item" href="ContactUs.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+                <a href="ContactUs.html#quote-form" class="btn btn-secondary ms-3">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section id="services-hero" class="diagonal-section dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Our Comprehensive Services</h1>
+                    <p class="hero-subtitle">Discover our range of logistics solutions designed to meet your specific freight needs</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="service-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-truck-moving"></i>
+                            <h3>5,000+</h3>
+                            <p>Verified Carriers</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-route"></i>
+                            <h3>15M+</h3>
+                            <p>Miles Covered</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-box"></i>
+                            <h3>10,000+</h3>
+                            <p>Monthly Shipments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section id="main-services" class="py-5">
+        <div class="container">
+            <div class="section-intro text-center mb-5">
+                <span class="section-tag">OUR OFFERINGS</span>
+                <h2 class="section-heading">Core Services</h2>
+                <p class="section-subheading">Explore our comprehensive range of logistics solutions tailored to your needs</p>
+            </div>
+
+            <!-- Service Cards will be added here -->
+            <div class="service-cards">
+                <!-- FTL Service -->
+                <div class="service-card-detailed" data-aos="fade-up">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg" alt="Full Truckload Service">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge">Most Popular</div>
+                        <h3>Full Truckload (FTL)</h3>
+                        <p>A single shipment fills an entire truck, offering dedicated transport with no additional stops or handling.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Direct point-to-point delivery</li>
+                            <li><i class="fas fa-check-circle"></i> Minimized risk of damage or loss</li>
+                            <li><i class="fas fa-check-circle"></i> Faster transit times</li>
+                            <li><i class="fas fa-check-circle"></i> Ideal for time-sensitive or high-value cargo</li>
+                        </ul>
+                        <a href="LandingPage.html#contact" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- LTL Service -->
+                <div class="service-card-detailed" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/1267325/pexels-photo-1267325.jpeg" alt="Less than Truckload Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>Less than Truckload (LTL)</h3>
+                        <p>Multiple smaller shipments share space in one truck, providing cost-effective transportation for partial loads.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Cost-effective for smaller shipments</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible scheduling options</li>
+                            <li><i class="fas fa-check-circle"></i> Nationwide coverage network</li>
+                            <li><i class="fas fa-check-circle"></i> Environmentally friendly option</li>
+                        </ul>
+                        <a href="LandingPage.html#contact" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Refrigerated Transport -->
+                <div class="service-card-detailed" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/3694341/pexels-photo-3694341.jpeg" alt="Refrigerated Transport Service">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge service-badge-accent">Specialized</div>
+                        <h3>Refrigerated Transport</h3>
+                        <p>Temperature-controlled shipping for perishable goods like food, pharmaceuticals, and temperature-sensitive products.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Precise temperature monitoring</li>
+                            <li><i class="fas fa-check-circle"></i> FDA-compliant equipment</li>
+                            <li><i class="fas fa-check-circle"></i> Available for FTL and LTL shipments</li>
+                            <li><i class="fas fa-check-circle"></i> Enhanced product integrity protection</li>
+                        </ul>
+                        <a href="LandingPage.html#contact" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Flatbed Trucking -->
+                <div class="service-card-detailed" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg" alt="Flatbed Trucking Service">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge service-badge-special">Heavy Haul</div>
+                        <h3>Flatbed Trucking</h3>
+                        <p>Used for oversized or heavy cargo such as machinery, construction materials, and industrial equipment.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Specialized loading and securing</li>
+                            <li><i class="fas fa-check-circle"></i> Oversized load capabilities</li>
+                            <li><i class="fas fa-check-circle"></i> Permit acquisition management</li>
+                            <li><i class="fas fa-check-circle"></i> Expert handling of challenging freight</li>
+                        </ul>
+                        <a href="LandingPage.html#contact" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Expedited Shipping -->
+                <div class="service-card-detailed" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/2684219/pexels-photo-2684219.jpeg" alt="Expedited Shipping Service">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-badge service-badge-premium">Premium</div>
+                        <h3>Expedited Shipping</h3>
+                        <p>Fast and time-sensitive deliveries for urgent cargo requiring prioritized handling and transportation.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Guaranteed delivery windows</li>
+                            <li><i class="fas fa-check-circle"></i> Priority dispatch and routing</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time shipment tracking</li>
+                        </ul>
+                        <a href="LandingPage.html#contact" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-services mt-5 text-center" data-aos="fade-up" data-aos-delay="500">
+                <h4 class="mb-4">Looking for Something Else?</h4>
+                <p class="mb-4">Our team of logistics experts can help you find the perfect shipping solution for your specific needs.</p>
+                <a href="LandingPage.html#contact" class="btn btn-lg btn-outline-primary">Request Custom Solution <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Services Section -->
+    <section id="specialized-services" class="diagonal-section dark">
+        <div class="container">
+            <div class="section-intro text-center mb-5">
+                <span class="section-tag">INDUSTRY EXPERTISE</span>
+                <h2 class="section-heading">Tailored Logistics Solutions</h2>
+                <p class="section-subheading">Industry-specific freight solutions designed for your unique challenges</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Food & Beverage -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="industry-card dark">
+                        <div class="industry-icon-wrapper">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Food & Beverage</h3>
+                        <p>Temperature-controlled logistics ensuring product integrity from farm to table.</p>
+                        <div class="industry-features">
+                            <span><i class="fas fa-check-circle"></i> FSMA-compliant</span>
+                            <span><i class="fas fa-check-circle"></i> Temperature monitoring</span>
+                            <span><i class="fas fa-check-circle"></i> Cold chain verified</span>
+                        </div>
+                        <a href="LandingPage.html#contact" class="btn btn-outline-light mt-3 w-100">Request Solution</a>
+                    </div>
+                </div>
+
+                <!-- Construction -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="industry-card dark">
+                        <div class="industry-icon-wrapper">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>Construction</h3>
+                        <p>Specialized equipment and expertise for oversized and heavy building materials.</p>
+                        <div class="industry-features">
+                            <span><i class="fas fa-check-circle"></i> Oversized loads</span>
+                            <span><i class="fas fa-check-circle"></i> Project coordination</span>
+                            <span><i class="fas fa-check-circle"></i> Just-in-time delivery</span>
+                        </div>
+                        <a href="LandingPage.html#contact" class="btn btn-outline-light mt-3 w-100">Request Solution</a>
+                    </div>
+                </div>
+
+                <!-- Healthcare & Pharma -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="industry-card dark">
+                        <div class="industry-icon-wrapper">
+                            <i class="fas fa-prescription-bottle-alt"></i>
+                        </div>
+                        <h3>Healthcare</h3>
+                        <p>Validated pharmaceutical shipping with strict temperature and security protocols.</p>
+                        <div class="industry-features">
+                            <span><i class="fas fa-check-circle"></i> GDP compliant</span>
+                            <span><i class="fas fa-check-circle"></i> Validated shipping</span>
+                            <span><i class="fas fa-check-circle"></i> Chain of custody</span>
+                        </div>
+                        <a href="LandingPage.html#contact" class="btn btn-outline-light mt-3 w-100">Request Solution</a>
+                    </div>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="industry-card dark">
+                        <div class="industry-icon-wrapper">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <p>Supply chain optimization for raw materials and finished goods logistics.</p>
+                        <div class="industry-features">
+                            <span><i class="fas fa-check-circle"></i> Just-in-time</span>
+                            <span><i class="fas fa-check-circle"></i> Inventory solutions</span>
+                            <span><i class="fas fa-check-circle"></i> Load optimization</span>
+                        </div>
+                        <a href="LandingPage.html#contact" class="btn btn-outline-light mt-3 w-100">Request Solution</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section id="service-features" class="py-5">
+        <div class="container">
+            <div class="section-intro text-center mb-5">
+                <span class="section-tag">WHY CHOOSE US</span>
+                <h2 class="section-heading">Service Features</h2>
+                <p class="section-subheading">Experience the GrowFreight difference with our premium service features</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service and shipment monitoring for peace of mind.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Advanced tracking technology providing minute-by-minute location updates.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cargo Insurance</h3>
+                    <p>Comprehensive coverage ensuring your shipments are protected throughout transit.</p>
+                </div>
+
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Detailed shipping analytics and custom reports for better decision making.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="LandingPage.html#contact" class="btn btn-primary btn-lg">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section diagonal-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4" data-aos="fade-up">Ready to Streamline Your Logistics?</h2>
+                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Our logistics experts are standing by to help you find the perfect shipping solution for your business needs.</p>
+                    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="LandingPage.html#contact" class="cta-button me-3">Get a Free Quote <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="tel:8001234567" class="cta-button cta-button-outline"><i class="fas fa-phone-alt me-2"></i> (800) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+   <footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h3 class="footer-heading">About GrowMore Freight</h3>
+                <p>We provide efficient logistics solutions tailored to your specific needs, ensuring your cargo arrives safely and on time.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                <h3 class="footer-heading">Quick Links</h3>
+                <a href="LandingPage.html" class="footer-link">Home</a>
+                <a href="Services.html" class="footer-link">Services</a>
+                <a href="HowItWorks.html" class="footer-link">How It Works</a>
+                <a href="Health_and_Safety.html" class="footer-link">Health & Safety</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                <h3 class="footer-heading">Our Services</h3>
+                <a href="Services.html#truckload" class="footer-link">Truckload Freight</a>
+                <a href="Services.html#ltl" class="footer-link">LTL Shipping</a>
+                <a href="Services.html#expedited" class="footer-link">Expedited Shipping</a>
+                <a href="Services.html#specialized" class="footer-link">Specialized Freight</a>
+                <a href="Services.html#international" class="footer-link">International Shipping</a>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="footer-heading">Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt me-2"></i> 1234 Logistics Way, Freight City, FC 56789</p>
+                <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope me-2"></i> info@growmorefreight.com</p>
+                <form>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="row copyright text-center">
+            <div class="col-12">
+                <p class="mb-0">© 2023 GrowMore Freight LLC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
